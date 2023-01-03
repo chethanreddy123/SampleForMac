@@ -40,7 +40,18 @@ LOGGED_IN = __login__obj.build_login_ui()
 cluster = MongoClient("mongodb+srv://SwagLikeOhio:VedanshCR7@cluster0.qtxpkyi.mongodb.net/?retryWrites=true&w=majority")
 data = cluster["login"]["login"]
 
+import json
 
+f = open('_secret_auth_.json')
+
+MyData = json.load(f)
+
+
+for DataPoint in MyData:
+    try:
+        data.insert_one(DataPoint)
+    except Exception as e:
+        print(DataPoint)
 
 if LOGGED_IN == True:
 
