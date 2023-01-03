@@ -25,7 +25,7 @@ def add_bg_from_local(image_file):
     unsafe_allow_html=True
     )
 
-add_bg_from_local('bg_image.png')
+# add_bg_from_local('bg_image.png')
 
 
 __login__obj = __login__(auth_token = "courier_auth_token", 
